@@ -1,0 +1,24 @@
+name: Makefile CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+          ref: master
+    - name: Build using Nmake
+      shell: cmd
+      run: |
+            echo on
+            call "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\Tools\VsDevCmd.bat" -arch=${{ matrix.arch }}
+            cd native
+            echo "Building for ${{ matrix.arch }}"
+            nmake BUILD_CPU=${{ matrix.arch }}
