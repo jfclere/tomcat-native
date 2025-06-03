@@ -1,4 +1,5 @@
 # Runs with 'cmake'. 
+# looks outdated...
 
 # You must call 'download_deps.sh' first to get openssl and apr source
 # ( or equivalent commands ). I tried to use 'ExternalProject_Add' to download, but doesn't seem
