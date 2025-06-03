@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
       with:
-          ref: master
+          ref: trunk
     - name: Build using Nmake
       shell: cmd
       run: |
