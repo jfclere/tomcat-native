@@ -2,9 +2,9 @@ name: Makefile CI
 
 on:
   push:
-    branches: [ "trunk" ]
+    branches: [ "test" ]
   pull_request:
-    branches: [ "trunk" ]
+    branches: [ "test" ]
 
 env:
   OPENSSL_VERSION: 3.5.0
