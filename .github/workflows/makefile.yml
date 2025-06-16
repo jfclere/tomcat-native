@@ -89,4 +89,4 @@ jobs:
      - uses: actions/upload-artifact@v4
        with:
          name: windows-artifact
-         path: native/WIN7_X64_DLL_RELEASE\tcnative-2.dll
+         path: native\WIN7_X64_DLL_RELEASE\tcnative-2.dll
